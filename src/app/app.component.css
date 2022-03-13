@@ -1,0 +1,94 @@
+header{
+  width: 100%;
+  height: 100px;
+  background-color:  #6F6F6F;
+  border-bottom: 7px solid #05a76a;
+  display: flex;
+}
+
+.fa-arrow-right-to-bracket{
+  color: #6F6F6F;
+  padding-left: 3px;
+}
+
+.leftMainButtonsDiv{
+  display: flex;
+  align-items: center;
+}
+
+.rightMainButtonDiv{
+  margin-left: 50em;
+  margin-right: 4em;
+  display: flex;
+  align-items: center;
+}
+
+#signIn, #signUp{
+  height: 50px;
+  font-size: 1.7em;
+  border-radius: 30px;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+}
+
+.signInDiv{
+  margin-right: 4em;
+}
+
+.mainButtonDiv{
+  margin-left: 4em;
+}
+
+.mainButton{
+  height: 30px;
+  width: auto;
+  font-size: 2em;
+  color: #FFFFFF;
+  background: none;
+  border: 0;
+}
+
+.mainButton:hover{
+  color: #05a76a;
+  transition: 0.35s;
+}
+
+#signIn:hover{
+  color: #05a76a;
+  background-color: #E7E7E7 ;
+  box-shadow: 0px 0px 10px 3px rgba(240, 240, 240, 0.2);
+  transition: 0.35s;
+}
+
+.mainTextDiv{
+  margin: 6rem 0 0 15rem;
+}
+
+.mainTextParagraph1{
+  margin-top: 2em;
+}
+
+.mainTextParagraph2{
+  margin-top: 1em;
+}
+
+.title{
+  font-size: 3em;
+}
+
+.firstDescription, .secondDescription, .thirdDescription{
+  font-size: 1.4em;
+}
+
+.videoDiv{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.wrapper, .thirdDescription{
+ margin-left: 15rem;
+  margin-bottom: 2em;
+}
+
