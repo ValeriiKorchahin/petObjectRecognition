@@ -15,4 +15,12 @@ export class AppComponent {
   goToRecognizePage(): void {
     this.router.navigate(['/recognize'], {relativeTo: this.activatedRoute})
   }
+
+  goToHomePage(): void {
+    this.router.navigate([''], {relativeTo: this.activatedRoute})
+  }
+
+  goToMapPage() {
+    this.router.navigate(['/map'], {relativeTo:this.activatedRoute})
+  }
 }

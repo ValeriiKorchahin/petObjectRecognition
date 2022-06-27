@@ -1,0 +1,78 @@
+<h2 class="title">
+  Try it yourself!
+</h2>
+
+<div class="mainContent">
+
+<div class="mainContentLeft">
+  <div class="text">
+    <p class="firstParagraph">
+      This page allows you to recognize military vehicles on pictures and track them on videos.<br>
+      Recognition results will be collected and then used to improve existing recognition models.<br>
+    </p>
+  </div>
+<div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
+  <ngx-dropzone-label>
+    <div>
+      <h2>Drop or choose file here!</h2>
+    </div>
+  </ngx-dropzone-label>
+  <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+    <ngx-dropzone-label class="fileLabel">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+  </ngx-dropzone-image-preview>
+</div>
+</div>
+
+<div class="mainContentRight">
+  <div class="text">
+    <p class="secondParagraph">
+      Firstly upload picture or video and select vehicle type.<br>
+      Then press 'Upload Image' button and wait until recognition results appear.
+      You can change vehicle type on the same image to get better results.<br>
+      After that you can fill the form and save data to database.
+    </p>
+  </div>
+
+  <form action="#" method="post">
+
+    <label class="textHelper">Decimal Degree:</label>
+  <div class="latitudeDiv">
+    <input id="latitude" placeholder="Latitude (48.079616)">
+  </div>
+  <div class="longitudeDiv">
+    <input id="longitude" placeholder="Longitude (38.431955)">
+  </div>
+  <div class="descriptionTextDiv">
+    <p class="textHelper">Enter description</p>
+    <textarea id="descriptionText" placeholder="Give description" type="text"></textarea>
+  </div>
+
+    <label class="textHelper">Select a vehicle</label>
+    <div class="modelSelectDiv">
+    <select id="modelSelect">
+      <option value="1" selected>Tank</option>
+      <option value="2">Armored personnel carrier</option>
+      <option value="3">Ship</option>
+      <option value="4">Aircraft</option>
+    </select>
+  </div>
+  <div class="buttonDiv">
+    <input type='file' id="uploadButton">
+  </div>
+    <div class="radioInputDiv">
+      <input id="checkBoxCorrect" name="recognition" type="radio">
+      <label for="checkBoxCorrect">Recognition is correct</label>
+    </div>
+      <div class="radioInputDiv">
+      <input id="checkBoxIncorrect" name="recognition" type="radio">
+      <label for="checkBoxCorrect">Recognition is incorrect</label>
+      </div>
+      <div class="buttonDiv">
+      <button id="saveToDB">Save to database</button>
+      </div>
+
+  </form>
+
+  </div>
+
+</div>

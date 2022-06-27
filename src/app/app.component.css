@@ -61,34 +61,3 @@ header{
   transition: 0.35s;
 }
 
-.mainTextDiv{
-  margin: 6rem 0 0 15rem;
-}
-
-.mainTextParagraph1{
-  margin-top: 2em;
-}
-
-.mainTextParagraph2{
-  margin-top: 1em;
-}
-
-.title{
-  font-size: 3em;
-}
-
-.firstDescription, .secondDescription, .thirdDescription{
-  font-size: 1.4em;
-}
-
-.videoDiv{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-
-.wrapper, .thirdDescription{
- margin-left: 15rem;
-  margin-bottom: 2em;
-}
-

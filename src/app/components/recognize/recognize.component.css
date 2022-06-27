@@ -1,0 +1,108 @@
+.title{
+  margin: 3rem 0 0 15rem;
+  font-size: 3em;
+}
+
+.mainContent{
+  margin: 1rem 6rem 0 15rem;
+  display: flex;
+}
+
+.mainContentLeft{
+  margin-right: 3rem;
+}
+
+.custom-dropzone{
+  height: 600px;
+  width: 800px;
+  background-color: #E7E7E7;
+  border: 5px solid #e3e9ee;
+}
+
+.firstParagraph, .secondParagraph, .textHelper{
+  font-size: 1.3em;
+}
+
+.latitudeDiv{
+  margin-bottom: 10px;
+}
+
+.textHelper{
+  margin: 0.5em 0 5px 0;
+}
+
+.buttonDiv{
+  margin: 1em 0 1.5em 0;
+}
+
+.radioInputDiv{
+  margin-bottom: 5px;
+}
+
+#longitude, #latitude{
+  padding:5px 0 0 10px;
+  height: 35px;
+  width: 15rem;
+  font-size: 1.1em;
+  background-color: #eceded;
+}
+
+#descriptionText{
+  padding: 5px 0 0 10px;
+  height: 100px;
+  width: 15rem;
+  border: none;
+  outline: none;
+  background-color: #eceded;
+  font-size: 1.1em;
+}
+
+#modelSelect{
+  height: 30px;
+  width: 15rem;
+  background-color: #eceded;
+}
+
+#uploadButton{
+  height: 40px ;
+}
+
+#saveToDB{
+  margin-left: 2.5rem;
+  padding: 2px;
+  height: 45px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  background-color: #98cded;
+  color: #FFFFFF;
+  font-size: 1.1em;
+}
+
+#modelSelect{
+  padding: 2px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+#uploadButton:hover{
+
+}
+
+#checkBoxCorrect, #checkBoxIncorrect{
+  margin-right: 5px;
+}
+
+label{
+  font-size: 1.1em;
+}
+
+#longitude, #latitude{
+  border:none;
+  outline: none;
+}
+
+
+

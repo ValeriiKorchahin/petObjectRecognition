@@ -1,13 +1,13 @@
 <header>
   <div class="leftMainButtonsDiv">
   <div class="mainButtonDiv">
-    <button class="mainButton">Home</button>
+    <button class="mainButton" (click)="goToHomePage()">Home</button>
   </div>
   <div class="mainButtonDiv">
     <button class="mainButton" (click)="goToRecognizePage()">Recognize</button>
   </div>
   <div class="mainButtonDiv">
-    <button class="mainButton">Map</button>
+    <button class="mainButton" (click)="goToMapPage()">Map</button>
   </div>
   <div class="mainButtonDiv">
     <button class="mainButton">History</button>
@@ -23,43 +23,7 @@
   </div>
 </header>
 
-<div class="mainTextDiv">
-<div class="mainTextTitle">
-  <p class="title">
-    Unusual objects? We will find them!
-  </p>
-</div>
-  <div class="mainTextParagraph1">
-    <p class="firstDescription">
-      The project is oriented on object detecting in images and tracking them on videos.
-    </p>
-  </div>
-  <div class="mainTextParagraph2">
-    <p class="secondDescription">
-      Its main feature is that it uses custom made models and works with complex tasks
-      caused by unusual objects and special detection conditions.
-    </p>
-  </div>
-</div>
-<div class="wrapper">
-  <app-carousel></app-carousel>
-</div>
-
-<div class="mainTextParagraph3">
-  <p class="thirdDescription">
-    Unlike other services we will make every client feel special by providing them our best solutions.
-    <br>
-    Here you can see how our program works with detection and tracking such complicated objects as tanks and
-    armoured personnel carriers.
-  </p>
-</div>
-
-<div class="videoDiv">
-  <video id="video">
-    <source src="https://res.cloudinary.com/ddmivk4av/video/upload/v1615053842/video.mp4" type="video/mp4">
-  </video>
-</div>
-
+<router-outlet></router-outlet>
 
 
 
