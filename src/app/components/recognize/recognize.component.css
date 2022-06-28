@@ -19,90 +19,95 @@
   border: 5px solid #e3e9ee;
 }
 
-.firstParagraph, .secondParagraph, .textHelper{
+.firstParagraph, .secondParagraph, .formCheckLabelCorrect, .formCheckLabelIncorrect{
   font-size: 1.3em;
 }
 
-.latitudeDiv{
-  margin-bottom: 10px;
+.formLabel{
+  font-size: 1.5em;
 }
 
-.textHelper{
-  margin: 0.5em 0 5px 0;
+.descriptionController, .selectModelController{
+  display: flex;
+  flex-direction: column;
 }
 
-.buttonDiv{
-  margin: 1em 0 1.5em 0;
+.uploadButtonController{
+  margin: 1em 0 2em;
 }
 
-.radioInputDiv{
-  margin-bottom: 5px;
+.latitudeController, .longitudeController{
+  display: flex;
 }
 
-#longitude, #latitude{
-  padding:5px 0 0 10px;
-  height: 35px;
-  width: 15rem;
-  font-size: 1.1em;
-  background-color: #eceded;
+.latitudeController{
+  margin: 0 0 10px 0;
 }
 
-#descriptionText{
-  padding: 5px 0 0 10px;
-  height: 100px;
-  width: 15rem;
-  border: none;
-  outline: none;
-  background-color: #eceded;
-  font-size: 1.1em;
+#longitude, #latitude {
+  margin: 0 0 0 5px;
+  height: 29px;
+  padding: 3px 2px;
+  border: 1px solid #bec4c9;
+;
+}
+
+.descriptionController{
+  margin: 1em 0 1em 0;
+}
+
+#description, #modelSelect{
+  width: 50%;
+  border: 1px solid #bec4c9;
 }
 
 #modelSelect{
   height: 30px;
-  width: 15rem;
-  background-color: #eceded;
 }
 
-#uploadButton{
-  height: 40px ;
+#description{
+  height: 100px;
+}
+
+#uploadImageButton, #saveToDB{
+  height: 40px;
+  width: 180px;
+  border-radius: 15px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 8px 8px 6px -6px rgba(0,0,0,0.21);
+}
+
+#uploadImageButton{
+  background-color: #05a76a;
+  color: #FFFFFF;
 }
 
 #saveToDB{
-  margin-left: 2.5rem;
-  padding: 2px;
-  height: 45px;
-  width: 150px;
-  border-radius: 20px;
-  border: none;
   background-color: #98cded;
   color: #FFFFFF;
-  font-size: 1.1em;
 }
 
-#modelSelect{
-  padding: 2px;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  font-size: 1.1em;
+.checkBoxController{
+  width: 50%;
+  margin: 0 0 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#uploadButton:hover{
-
+#recognitionIncorrect, #recognitionCorrect{
+  margin: 0 5px 0 0;
 }
 
-#checkBoxCorrect, #checkBoxIncorrect{
-  margin-right: 5px;
+.formCheckLabelCorrect{
+  margin: 0 17px 0 0;
 }
 
-label{
-  font-size: 1.1em;
+.uploadButtonController{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-#longitude, #latitude{
-  border:none;
-  outline: none;
-}
-
-
 

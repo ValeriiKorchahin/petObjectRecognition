@@ -1,4 +1,4 @@
-<h2 class="title">
+<h2 class="title" xmlns="http://www.w3.org/1999/html">
   Try it yourself!
 </h2>
 
@@ -28,51 +28,51 @@
     <p class="secondParagraph">
       Firstly upload picture or video and select vehicle type.<br>
       Then press 'Upload Image' button and wait until recognition results appear.
-      You can change vehicle type on the same image to get better results.<br>
-      After that you can fill the form and save data to database.
+      You can change vehicle type on the same image to get better results.
+      After that you can fill the form and save it to database.
     </p>
   </div>
-
-  <form action="#" method="post">
-
-    <label class="textHelper">Decimal Degree:</label>
-  <div class="latitudeDiv">
-    <input id="latitude" placeholder="Latitude (48.079616)">
-  </div>
-  <div class="longitudeDiv">
-    <input id="longitude" placeholder="Longitude (38.431955)">
-  </div>
-  <div class="descriptionTextDiv">
-    <p class="textHelper">Enter description</p>
-    <textarea id="descriptionText" placeholder="Give description" type="text"></textarea>
-  </div>
-
-    <label class="textHelper">Select a vehicle</label>
-    <div class="modelSelectDiv">
-    <select id="modelSelect">
-      <option value="1" selected>Tank</option>
-      <option value="2">Armored personnel carrier</option>
-      <option value="3">Ship</option>
-      <option value="4">Aircraft</option>
-    </select>
-  </div>
-  <div class="buttonDiv">
-    <input type='file' id="uploadButton">
-  </div>
-    <div class="radioInputDiv">
-      <input id="checkBoxCorrect" name="recognition" type="radio">
-      <label for="checkBoxCorrect">Recognition is correct</label>
+  <h4>Decimal Degree:</h4>
+  <form action="#">
+    <div class="formControl">
+    <div class="latitudeController">
+    <label class="formLabel" for="latitude">Latitude:</label>
+    <input placeholder="48.079616" type="text" id="latitude" >
     </div>
-      <div class="radioInputDiv">
-      <input id="checkBoxIncorrect" name="recognition" type="radio">
-      <label for="checkBoxCorrect">Recognition is incorrect</label>
-      </div>
-      <div class="buttonDiv">
-      <button id="saveToDB">Save to database</button>
-      </div>
-
+    <div class="longitudeController">
+      <label class="formLabel" for="longitude">Longitude:</label>
+      <input placeholder="38.431955" type="text" id="longitude">
+    </div>
+    <div class="descriptionController">
+      <label class="formLabel" for="description" >Description:</label>
+      <textarea placeholder="Give description..." id="description"></textarea>
+    </div>
+    <div class="selectModelController">
+      <label class="formLabel" for="modelSelect">Select a vehicle type</label>
+      <select id="modelSelect">
+        <option selected value="1">Tank</option>
+        <option value="2">Armored personnel carrier</option>
+        <option value="3">Ship</option>
+        <option value="4">Aircraft</option>
+      </select>
+    </div>
+    </div>
   </form>
-
+  <div class="uploadButtonController">
+  <button id="uploadImageButton" type="button">Upload Image</button>
   </div>
-
+  <div>
+  <div class="checkBoxController">
+    <input type="radio" id="recognitionCorrect" name="recognition" checked>
+    <label class="formCheckLabelCorrect" for="recognitionCorrect">Recognition is correct</label>
+  </div>
+  <div class="checkBoxController">
+    <input type="radio" id="recognitionIncorrect" name="recognition">
+    <label class="formCheckLabelIncorrect" for="recognitionIncorrect">Recognition is incorrect</label>
+  </div>
+    <div class="uploadButtonController">
+      <button id="saveToDB" type="button">Save to database</button>
+    </div>
+  </div>
+</div>
 </div>
