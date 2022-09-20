@@ -1,5 +1,6 @@
 export interface MlLocation {
+  content: [];
   locationId: number;
-  longitude: string;
-  latitude: string
+  longitude: number;
+  latitude: number
 }

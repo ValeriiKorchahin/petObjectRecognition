@@ -1,78 +1,78 @@
-<h2 class="title" xmlns="http://www.w3.org/1999/html">
-  Try it yourself!
-</h2>
+  <h2 class="title" xmlns="http://www.w3.org/1999/html">
+    Try it yourself!
+  </h2>
 
-<div class="mainContent">
+  <div class="mainContent">
 
-<div class="mainContentLeft">
-  <div class="text">
-    <p class="firstParagraph">
-      This page allows you to recognize military vehicles on pictures and track them on videos.<br>
-      Recognition results will be collected and then used to improve existing recognition models.<br>
-    </p>
-  </div>
-<div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
-  <ngx-dropzone-label>
-    <div>
-      <h2>Drop or choose file here!</h2>
+  <div class="mainContentLeft">
+    <div class="text">
+      <p class="firstParagraph">
+        This page allows you to recognize military vehicles on pictures and track them on videos.<br>
+        Recognition results will be collected and then used to improve existing recognition models.<br>
+      </p>
     </div>
-  </ngx-dropzone-label>
-  <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
-    <ngx-dropzone-label class="fileLabel">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
-  </ngx-dropzone-image-preview>
-</div>
-</div>
+  <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
+    <ngx-dropzone-label>
+      <div>
+        <h2>Drop or choose file here!</h2>
+      </div>
+    </ngx-dropzone-label>
+    <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+      <ngx-dropzone-label class="fileLabel">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+    </ngx-dropzone-image-preview>
+  </div>
+  </div>
 
-<div class="mainContentRight">
-  <div class="text">
-    <p class="secondParagraph">
-      Firstly upload picture or video and select vehicle type.<br>
-      Then press 'Upload Image' button and wait until recognition results appear.
-      You can change vehicle type on the same image to get better results.
-      After that you can fill the form and save it to database.
-    </p>
-  </div>
-  <h4>Decimal Degree:</h4>
-  <form action="#">
-    <div class="formControl">
-    <div class="latitudeController">
-    <label class="formLabel" for="latitude">Latitude:</label>
-    <input placeholder="48.079616" type="text" id="latitude" >
+  <div class="mainContentRight">
+    <div class="text">
+      <p class="secondParagraph">
+        Firstly upload picture or video and select vehicle type.<br>
+        Then press 'Upload Image' button and wait until recognition results appear.
+        You can change vehicle type on the same image to get better results.
+        After that you can fill the form and save it to database.
+      </p>
     </div>
-    <div class="longitudeController">
-      <label class="formLabel" for="longitude">Longitude:</label>
-      <input placeholder="38.431955" type="text" id="longitude">
-    </div>
-    <div class="descriptionController">
-      <label class="formLabel" for="description" >Description:</label>
-      <textarea placeholder="Give description..." id="description"></textarea>
-    </div>
-    <div class="selectModelController">
-      <label class="formLabel" for="modelSelect">Select a vehicle type</label>
-      <select id="modelSelect">
-        <option selected value="1">Tank</option>
-        <option value="2">Armored personnel carrier</option>
-        <option value="3">Ship</option>
-        <option value="4">Aircraft</option>
-      </select>
-    </div>
-    </div>
-  </form>
-  <div class="uploadButtonController">
-  <button id="uploadImageButton" type="button">Upload Image</button>
-  </div>
-  <div>
-  <div class="checkBoxController">
-    <input type="radio" id="recognitionCorrect" name="recognition" checked>
-    <label class="formCheckLabelCorrect" for="recognitionCorrect">Recognition is correct</label>
-  </div>
-  <div class="checkBoxController">
-    <input type="radio" id="recognitionIncorrect" name="recognition">
-    <label class="formCheckLabelIncorrect" for="recognitionIncorrect">Recognition is incorrect</label>
-  </div>
+    <h4>Decimal Degree:</h4>
+    <form action="#" [formGroup]="recognizeFormGroup" (ngSubmit)="save()">
+      <div class="formControl">
+      <div class="latitudeController">
+      <label class="formLabel" for="latitude">Latitude:</label>
+      <input placeholder="48.079616" type="text" id="latitude"  formControlName="latitude" >
+      </div>
+      <div class="longitudeController">
+        <label class="formLabel" for="longitude">Longitude:</label>
+        <input placeholder="38.431955" type="text" id="longitude"  formControlName="longitude">
+      </div>
+      <div class="descriptionController">
+        <label class="formLabel" for="description" >Description:</label>
+        <textarea placeholder="Give description..." id="description"  formControlName="description"></textarea>
+      </div>
+      <div class="selectModelController">
+        <label class="formLabel" for="modelSelect">Select a vehicle type</label>
+        <select id="modelSelect" formControlName="model">
+          <option selected value="1">Tank</option>
+          <option value="2">Armored personnel carrier</option>
+          <option value="3">Ship</option>
+          <option value="4">Aircraft</option>
+        </select>
+      </div>
+      </div>
     <div class="uploadButtonController">
-      <button id="saveToDB" type="button">Save to database</button>
+    <button id="uploadImageButton" type="button">Upload Image</button>
     </div>
+    <div>
+    <div class="checkBoxController">
+      <input type="radio" id="recognitionCorrect" name="recognition" checked>
+      <label class="formCheckLabelCorrect" for="recognitionCorrect">Recognition is correct</label>
+    </div>
+    <div class="checkBoxController">
+      <input type="radio" id="recognitionIncorrect" name="recognition">
+      <label class="formCheckLabelIncorrect" for="recognitionIncorrect">Recognition is incorrect</label>
+    </div>
+      <div class="uploadButtonController">
+        <button id="saveToDB" type="button">Save to database</button>
+      </div>
+    </div>
+    </form>
   </div>
-</div>
-</div>
+  </div>

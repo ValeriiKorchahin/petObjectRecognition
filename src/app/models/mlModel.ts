@@ -7,5 +7,5 @@ modelPath: null;
 isCustom: number;
 isActive: number;
 createDate: string;
-createUser: [CreateUser]
+createUser: CreateUser
 }

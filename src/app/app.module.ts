@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {RecognizeComponent} from "./components/recognize/recognize.component";
@@ -14,6 +14,10 @@ import { HomeComponent } from './components/home/home.component';
 import {NgxDropzoneModule} from "ngx-dropzone";
 import { MapComponent } from './components/map/map.component';
 import {AgmCoreModule} from "@agm/core";
+import { HistoryComponent } from './components/history/history.component';
+import { RecognizedObjectsComponent } from './components/recognized-objects/recognized-objects.component';
+import { RecognizedObjectComponent } from './components/recognized-object/recognized-object.component';
+
 
 
 
@@ -26,11 +30,15 @@ import {AgmCoreModule} from "@agm/core";
     CarouselComponent,
     RecognizeComponent,
     HomeComponent,
-    MapComponent
+    MapComponent,
+    HistoryComponent,
+    RecognizedObjectsComponent,
+    RecognizedObjectComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     FontAwesomeModule,

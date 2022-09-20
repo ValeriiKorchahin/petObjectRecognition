@@ -20,7 +20,11 @@ export class AppComponent {
     this.router.navigate([''], {relativeTo: this.activatedRoute})
   }
 
-  goToMapPage() {
+  goToMapPage(): void {
     this.router.navigate(['/map'], {relativeTo:this.activatedRoute})
+  }
+
+  gotoHistoryPage() {
+    this.router.navigate(['/history'], {relativeTo: this.activatedRoute})
   }
 }

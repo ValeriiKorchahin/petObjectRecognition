@@ -1,6 +1,6 @@
 import {Person} from "./person";
 
-export interface CreateUser{
+export interface UpdateUser{
   userId: number;
   username: string;
   password: string;

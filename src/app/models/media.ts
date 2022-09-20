@@ -5,5 +5,5 @@ export interface Media{
   originalMediaUrl: null;
   processedMediaUrl: null;
   createDate: string;
-  createUser: [CreateUser]
+  createUser: CreateUser
 }
