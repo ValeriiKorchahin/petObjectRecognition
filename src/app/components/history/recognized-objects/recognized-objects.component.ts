@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {RecognitionResult} from "../../models/recognitionResult";
+import {RecognitionResult} from "../../../models/recognitionResult";
 import {ActivatedRoute} from "@angular/router";
 
 @Component({

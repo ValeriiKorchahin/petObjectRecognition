@@ -15,8 +15,9 @@ import {NgxDropzoneModule} from "ngx-dropzone";
 import { MapComponent } from './components/map/map.component';
 import {AgmCoreModule} from "@agm/core";
 import { HistoryComponent } from './components/history/history.component';
-import { RecognizedObjectsComponent } from './components/recognized-objects/recognized-objects.component';
-import { RecognizedObjectComponent } from './components/recognized-object/recognized-object.component';
+import { RecognizedObjectsComponent } from './components/history/recognized-objects/recognized-objects.component';
+import { RecognizedObjectComponent } from './components/history/recognized-object/recognized-object.component';
+import { RecognizedObjectDetailsComponent } from './components/history/recognized-object/recognized-object-details/recognized-object-details.component';
 
 
 
@@ -33,7 +34,8 @@ import { RecognizedObjectComponent } from './components/recognized-object/recogn
     MapComponent,
     HistoryComponent,
     RecognizedObjectsComponent,
-    RecognizedObjectComponent
+    RecognizedObjectComponent,
+    RecognizedObjectDetailsComponent
   ],
   imports: [
     BrowserModule,

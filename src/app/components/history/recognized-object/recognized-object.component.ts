@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { RecognitionResult} from "../../models/recognitionResult";
+import { RecognitionResult} from "../../../models/recognitionResult";
 
 @Component({
   selector: 'app-recognized-object',

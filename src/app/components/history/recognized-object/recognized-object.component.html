@@ -8,9 +8,10 @@
       <p>Model: {{recognizedObject.mlModel.modelName}}</p>
       <p>Is object present: {{recognizedObject.isObjectPresent}}</p>
       <p>Created at: {{recognizedObject.createDate}}</p>
+      <a class="link" routerLink="{{recognizedObject.recognitionResultId}}">More details...</a>
     </div>
     <div class="picture-block">
-      <img alt="object_picture.jpg" class="picture" src="./assets/tank_004.jpg">
+      <img alt="object_picture.jpg" class="picture" src="../../../../assets/tank_004.jpg">
     </div>
       </div>
 </div>
