@@ -6,8 +6,8 @@
       <h3>ID: {{recognizedObject.recognitionResultId}}</h3>
       <h3>Description: {{recognizedObject.description}}</h3>
       <p>Model: {{recognizedObject.mlModel.modelName}}</p>
-      <p>Is object present: {{recognizedObject.isObjectPresent}}</p>
-      <p>Created at: {{recognizedObject.createDate}}</p>
+      <p>Is object present: {{recognizedObject.isObjectPresent | isObjectPresent}}</p>
+      <p>Created at: {{recognizedObject.createDate | date: 'medium'}}</p>
       <a class="link" routerLink="{{recognizedObject.recognitionResultId}}">More details...</a>
     </div>
     <div class="picture-block">

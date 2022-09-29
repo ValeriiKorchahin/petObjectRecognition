@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { RecognitionResult} from "../../../models/recognitionResult";
+import { RecognitionResult} from "../../../models/recognition-result-interface/recognitionResult";
 
 @Component({
   selector: 'app-recognized-object',
@@ -7,6 +7,8 @@ import { RecognitionResult} from "../../../models/recognitionResult";
   styleUrls: ['./recognized-object.component.css']
 })
 export class RecognizedObjectComponent implements OnInit {
+
+
 
   @Input()
   recognizedObject: RecognitionResult

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from "@angular/router";
-import {RecognitionResult} from "../../../models/recognitionResult";
+import {RecognitionResult} from "../../../models/recognition-result-interface/recognitionResult";
 import {Observable} from "rxjs";
 import {RecognitionResultService} from "../recognition-result.service";
 

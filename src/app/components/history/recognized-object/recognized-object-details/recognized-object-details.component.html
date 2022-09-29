@@ -1,2 +1,53 @@
-<p>{{recognizedObject.description}}</p>
-<p>{{recognizedObject.createDate}}</p>
+<div class="wrapper">
+  <form>
+  <div class="controls-top">
+    <div class="top-left-controllers">
+  <div class="description-controller">
+    <div>
+    <label for="description">Description:</label>
+    </div>
+    <textarea id="description" [value]="recognizedObject.description"></textarea>
+  </div>
+    <div class="model-controller">
+      <div>
+      <label for="model">Model name:</label>
+      </div>
+     <input type="text" id="model" [value]="recognizedObject.mlModel.modelName">
+    </div>
+    <div class="observed-object-controller">
+      <div>
+      <label for="observed-object">Observed objects:</label>
+      </div>
+      <input type="text" id="observed-object" [value]="">
+    </div>
+    </div>
+      <div class="img-div">
+        <img src="assets/tank_004.jpg">
+      </div>
+  </div>
+    <div class="controls-bottom">
+      <div class="bottom-left-controllers">
+      <div class="latitude-controller">
+        <div>
+        <label for="latitude">Latitude:</label>
+        </div>
+        <input type="text" id="latitude" [value]="recognizedObject.location.latitude">
+      </div>
+      <div class="longitude-controller">
+        <div>
+        <label for="longitude">Longitude:</label>
+        </div>
+        <input type="text" id="longitude" [value]="recognizedObject.location.longitude">
+      </div>
+      </div>
+      <div class="map-div">
+        <agm-map
+          [latitude] ="48.079616"
+          [longitude]="38.431955">
+          <agm-marker [latitude]="recognizedObject.location.latitude"
+                      [longitude]="recognizedObject.location.longitude" ></agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </form>
+</div>

@@ -18,6 +18,7 @@ import { HistoryComponent } from './components/history/history.component';
 import { RecognizedObjectsComponent } from './components/history/recognized-objects/recognized-objects.component';
 import { RecognizedObjectComponent } from './components/history/recognized-object/recognized-object.component';
 import { RecognizedObjectDetailsComponent } from './components/history/recognized-object/recognized-object-details/recognized-object-details.component';
+import { IsObjectPresentPipe } from './components/history/recognized-object/pipes/is-object-present.pipe';
 
 
 
@@ -35,7 +36,8 @@ import { RecognizedObjectDetailsComponent } from './components/history/recognize
     HistoryComponent,
     RecognizedObjectsComponent,
     RecognizedObjectComponent,
-    RecognizedObjectDetailsComponent
+    RecognizedObjectDetailsComponent,
+    IsObjectPresentPipe
   ],
   imports: [
     BrowserModule,
