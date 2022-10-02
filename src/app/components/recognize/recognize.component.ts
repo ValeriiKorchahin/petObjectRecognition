@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-recognize',
@@ -8,15 +8,9 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class RecognizeComponent implements OnInit {
 
+  condition: boolean
+
   files: File[] = [];
-
-  recognizeFormGroup: FormGroup = new FormGroup({
-    latitude: new FormControl('48.079616'),
-    longitude: new FormControl('38.431955'),
-    description: new FormControl('description'),
-    model: new FormControl('model')
-
-      })
 
       onSelect(event: any) {
         console.log(event);
@@ -33,7 +27,32 @@ export class RecognizeComponent implements OnInit {
       ngOnInit(): void {
       }
 
-      save() {
 
+  recognizeFormGroup: FormGroup = new FormGroup({
+    latitude: new FormControl('',[
+      Validators.required,
+      Validators.minLength(9),
+      Validators.maxLength(9)
+    ]),
+    longitude: new FormControl('',[
+      Validators.required,
+      Validators.minLength(9),
+      Validators.maxLength(9)
+    ]),
+    description: new FormControl('', [
+      Validators.required,
+      Validators.minLength(10)
+    ]),
+    model: new FormControl('', [
+      Validators.required
+    ])
+  })
+
+  getControl(control: any) {
+        return this.recognizeFormGroup.get(control)
+  }
+
+      save() {
+        console.log(this.recognizeFormGroup)
       }
     }

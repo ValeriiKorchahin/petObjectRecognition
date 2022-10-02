@@ -33,19 +33,32 @@
       </p>
     </div>
     <h4>Decimal Degree:</h4>
-    <form action="#" [formGroup]="recognizeFormGroup" (ngSubmit)="save()">
+    <form [formGroup]="recognizeFormGroup">
       <div class="formControl">
       <div class="latitudeController">
       <label class="formLabel" for="latitude">Latitude:</label>
-      <input placeholder="48.079616" type="text" id="latitude"  formControlName="latitude" >
+      <input placeholder="48.079616" type="text" id="latitude" formControlName="latitude">
+        <span class="span-error"
+        *ngIf="getControl('latitude')?.['errors']?.['minlength'] || getControl('latitude')?.['errors']?.['maxlength']">
+        Latitude must contain only 9 digits.
+        </span>
       </div>
       <div class="longitudeController">
         <label class="formLabel" for="longitude">Longitude:</label>
-        <input placeholder="38.431955" type="text" id="longitude"  formControlName="longitude">
+        <input placeholder="38.431955" type="text" id="longitude"
+               formControlName="longitude">
+        <span class="span-error"
+          *ngIf="getControl('longitude')?.['errors']?.['minlength'] || getControl('longitude')?.['errors']?.['maxlength']">
+          Longitude must contain only 9 digits.
+        </span>
       </div>
       <div class="descriptionController">
         <label class="formLabel" for="description" >Description:</label>
         <textarea placeholder="Give description..." id="description"  formControlName="description"></textarea>
+        <span class="span-error"
+          *ngIf="getControl('description')?.['errors']?.['minlength']">
+          Provide a description. Minimal length - 10.
+        </span>
       </div>
       <div class="selectModelController">
         <label class="formLabel" for="modelSelect">Select a vehicle type</label>
@@ -55,22 +68,26 @@
           <option value="3">Ship</option>
           <option value="4">Aircraft</option>
         </select>
+        <span class="span-error"
+        *ngIf="getControl('model')?.['errors']?.['required']">
+          Select at least one model.
+        </span>
       </div>
       </div>
     <div class="uploadButtonController">
-    <button id="uploadImageButton" type="button">Upload Image</button>
+    <button id="uploadImageButton" type="button" [disabled]="recognizeFormGroup.invalid">Upload Image</button>
     </div>
     <div>
     <div class="checkBoxController">
-      <input type="radio" id="recognitionCorrect" name="recognition" checked>
+      <input type="radio" id="recognitionCorrect" name="recognition" [disabled]="recognizeFormGroup.invalid" checked>
       <label class="formCheckLabelCorrect" for="recognitionCorrect">Recognition is correct</label>
     </div>
     <div class="checkBoxController">
-      <input type="radio" id="recognitionIncorrect" name="recognition">
+      <input type="radio" id="recognitionIncorrect" name="recognition" [disabled]="recognizeFormGroup.invalid">
       <label class="formCheckLabelIncorrect" for="recognitionIncorrect">Recognition is incorrect</label>
     </div>
       <div class="uploadButtonController">
-        <button id="saveToDB" type="button">Save to database</button>
+        <button id="saveToDB" type="button" (click)="save()" [disabled]="recognizeFormGroup.invalid">Save to database</button>
       </div>
     </div>
     </form>
