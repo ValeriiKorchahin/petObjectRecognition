@@ -1,0 +1,29 @@
+<div class="wrapper">
+
+<div class="mapDiv">
+  <agm-map [latitude] = '39.864559' [longitude]="48.660901">
+    <agm-marker *ngFor="let result of mapItem"
+                [latitude]="result.location.latitude" [longitude]="result.location.longitude">
+      <agm-info-window>
+        <img src="assets/tank_004.jpg" alt="military vehicle" class="picture">
+        <h6 class="model-name">{{result.mlModel.modelName}}</h6>
+        <p class="description">{{result.description}}</p>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>
+
+<div class="filter-template">
+  <button id="filter-button" (click)="showFilters()">Show\Hide Filters</button>
+  <div class="filter-controls" *ngIf="isFilterButtonClicked">
+  <label for="sort-by-model-name">Sort by model name:</label>
+  <select id="sort-by-model-name" [(ngModel)]="selectedModel" (change)="changeByModelName()">
+    <option selected value="All" name="filter">All</option>
+    <option name="filter" value="Tank">Tank</option>
+    <option name="filter" value="APC">APC</option>
+    <option name="filter" value="Ship">Ship</option>
+    <option name="filter" value="Aircraft">Aircraft</option>
+  </select>
+</div>
+</div>
+</div>
