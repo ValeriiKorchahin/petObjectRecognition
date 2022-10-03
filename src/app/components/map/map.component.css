@@ -1,0 +1,56 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+#filter-button{
+  margin: 0 0 0 35px;
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #05a76a;
+  color: #FFFFFF;
+  font-size: medium;
+  border: none;
+  outline: none;
+}
+
+#sort-by-model-name{
+  border-radius: 5px;
+  font-size: large;
+  outline: none;
+}
+
+.mapDiv, .filter-template{
+  margin: 50px 40px 0 0;
+}
+
+.filter-controls{
+  margin: 5px 0 0 0;
+}
+
+agm-map{
+  height: 800px;
+  width: 1100px;
+}
+
+.picture{
+  margin: 0 0 5px 0;
+  width: 300px;
+  height: 230px;
+}
+
+.model-name{
+  color: #05a76a;
+}
+
+.description{
+  font-size: large;
+  color: #000000;
+}
+
+label{
+  margin: 0 3px 0 0;
+  font-size: large;
+}
+
